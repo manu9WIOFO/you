@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Cee</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color:rgb(2, 2, 2);
+            color: white;
+        }
+        header {
+            background: #000;
+            color: #f4c542;
+            text-align: center;
+            padding: 1.5em;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #222;
+            padding: 1em;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75em 1.5em;
+            margin: 0 0.5em;
+            background: #444;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        nav a:hover {
+            background: #666;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 2em auto;
+            padding: 2em;
+            background: #222;
+            box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+            border-radius: 10px;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        .artist-image {
+            width: 100%;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 1em;
+            background: #000;
+            color: #f4c542;
+            margin-top: 2em;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Central Cee</h1>
+    </header>
+    <nav>
+        <a onclick="showSection('bio')">Biografía</a>
+        <a onclick="showSection('music')">Música</a>
+        <a onclick="showSection('gallery')">Galería</a>
+        <a onclick="showSection('contact')">Contacto</a>
+    </nav>
+    <div class="container">
+        <div id="bio" class="section active">
+            <h2>¿Quién es Central Cee?</h2>
+            <p>Central Cee es un rapero británico conocido por su estilo único en la escena del drill y el hip-hop. Su música ha capturado la atención de fanáticos en todo el mundo.
+                Primeros años
+Oakley Neil Caesar-Su nació el 4 de junio de 1998 en Shepherd's Bush, Londres de madre inglesa y padre guyanés-chino. En una entrevista con Just Jared en marzo de 2023, declaró lo siguiente sobre sus antecedentes:
+
+«Mi padre es guyanés y chino, y mi madre inglesa».
+Su madre, Rachel Caesar, conoció a su padre a los 15 años y comenzó a salir con él en contra de los deseos de sus padres, y posteriormente se cortó económicamente. Caesar-Su fue criado por su madre junto a dos hermanos menores en Shepherd's Bush.[10]​ Uno de sus hermanos es Juke Caesar, quien apareció en el mixtape 23 bajo el nombre de «Lil Bro».[11]​
+
+Cuando Caesar-Su visitaba a su padre, le mostraban hip-hop estadounidense.[12]​ También estaría expuesto al Reggae y al Dancehall cuando asistiera al Carnaval de Notting Hill.[13]​ Caesar-Su ha declarado que se mantuvo reservado en la escuela, pero que ocasionalmente se portaba mal y perdía los estribos. Fue a la misma escuela que el rapero Digga D, siendo un par de años superior.[14]​ Caesar-Su dejó la escuela a los 16 años.[15
+            </p>
+            <img src="cental.jpeg" alt="Central Cee" class="artist-image">
+        </div>
+        <div id="music" class="section">
+            <h2>Música</h2>
+            <p>Central Cee ha lanzado varios éxitos como "Doja", "Obsessed With You" y "Loading". Su estilo innovador lo ha convertido en uno de los artistas más influyentes del género.</p>
+        </div>
+        <div id="gallery" class="section">
+            <h2>Galería</h2>
+            <p>Aquí puedes encontrar imágenes y momentos icónicos de Central Cee.</p>
+            <img src="central.jpeg" alt="Central Cee en concierto" class="artist-image">
+        </div>
+        <div id="contact" class="section">
+            <h2>Contacto</h2>
+            <p>Sigue a Central Cee en sus redes sociales:</p>
+            <ul>
+                <li><a href="https://www.instagram.com/centralcee/" target="_blank">Instagram</a></li>
+                <li><a href="https://twitter.com/Central_Cee" target="_blank">Twitter</a></li>
+                <li><a href="https://www.youtube.com/c/CentralCee" target="_blank">YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Central Cee (por manuel corona). Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
